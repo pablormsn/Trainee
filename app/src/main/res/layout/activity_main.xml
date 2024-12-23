@@ -1,87 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp">
+    tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/et_a"
-        android:layout_width="match_parent"
+        android:id="@+id/et_username"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:autofillHints="Enter a"
-        android:hint="Enter a "
-        android:inputType="number"
-        tools:ignore="HardcodedText" />
+        android:hint="Username"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 
     <EditText
-        android:id="@+id/et_b"
-        android:layout_width="match_parent"
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:autofillHints="Enter b"
-        android:hint="Enter b "
-        android:inputType="number"
-        tools:ignore="HardcodedText" />
+        android:hint="Password"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/et_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp" />
 
-    <LinearLayout
-        style="?android:attr/buttonBarStyle"
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="+"
-            android:id="@+id/btn_add"
-            android:layout_margin="4dp"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="-"
-            android:id="@+id/btn_subtraction"
-            android:layout_margin="4dp"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:id="@+id/btn_multiplication"
-            android:layout_margin="4dp"
-            tools:ignore="HardcodedText" />
-
-        <Button
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="/"
-            android:id="@+id/btn_division"
-            android:layout_margin="4dp"
-            tools:ignore="HardcodedText" />
-    </LinearLayout>
-    
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:layout_margin="20dp"
-        android:textSize="24sp"
-        android:id="@+id/tv_result"
-        android:gravity="center"
-        tools:ignore="HardcodedText" />
-
-</LinearLayout>
-
-
-
-
+        android:text="Login"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
