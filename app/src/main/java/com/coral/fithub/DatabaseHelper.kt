@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
-class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(DATABASE_NAME, null, DATABASE_VERSION) {
+class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION) {
 
     companion object {
         private const val DATABASE_NAME = "Trainee.db"
