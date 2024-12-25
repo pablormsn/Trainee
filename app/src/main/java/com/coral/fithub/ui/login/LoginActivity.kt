@@ -1,4 +1,4 @@
-package com.coral.fithub
+package com.coral.fithub.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -6,6 +6,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.coral.fithub.MainActivity
+import com.coral.fithub.R
 import java.security.MessageDigest
 
 class LoginActivity : AppCompatActivity() {

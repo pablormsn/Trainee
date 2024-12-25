@@ -1,8 +1,9 @@
-package com.coral.fithub;
+package com.coral.fithub.data;
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.coral.fithub.R
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
