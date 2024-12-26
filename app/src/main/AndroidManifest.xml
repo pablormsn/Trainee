@@ -23,6 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".RutinaListActivity"
+            android:exported="true"
+            android:label="Mis rutinas"
+            android:theme="@style/Theme.FitHub" />
     </application>
 
 </manifest>

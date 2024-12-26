@@ -1,6 +1,8 @@
 package com.coral.fithub.data.model
 
-import androidx.room.*
+import androidx.room.Entity
+import androidx.room.ForeignKey
+
 @Entity(
     tableName = "RutinaEjercicio",
     primaryKeys = ["idRutina", "idEjercicio"],
@@ -22,6 +24,5 @@ import androidx.room.*
 
 data class RutinaEjercicio (
     val idRutina: Int,
-
-    val idEjercicio: Int
+    val idEjercicio: Int,
 )
