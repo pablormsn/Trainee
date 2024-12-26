@@ -4,6 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 import com.coral.fithub.R
+import com.coral.fithub.data.model.Rutina
 import java.io.BufferedReader
 import java.io.InputStreamReader
 
@@ -43,7 +44,25 @@ class DatabaseHelper(private val context: Context) : SQLiteOpenHelper(context, D
         // Puedes definir el comportamiento de actualización aquí
         db.execSQL("DROP TABLE IF EXISTS Musculo")
         db.execSQL("DROP TABLE IF EXISTS Ejercicio")
-        db.execSQL("DROP TABLE IF EXISTS Usuario")
+        db.execSQL("DROP TABLE IF EXISTS Rutina")
         onCreate(db)
+    }
+
+    fun getAllRutinas(): List<Rutina>{
+        val rutinas = mutableListOf<Rutina>()
+        val db = readableDatabase
+        val cursor = db.rawQuery("SELECT * FROM Rutina", null)
+
+        if(cursor.moveToFirst()){
+            do{
+                val id = cursor.getInt(cursor.getColumnIndexOrThrow("idRutina"))
+                val nombre = cursor.getString(cursor.getColumnIndexOrThrow("Nombre"))
+                val descripcion = cursor.getString(cursor.getColumnIndexOrThrow("Descripcion"))
+                rutinas.add(Rutina(id, nombre, descripcion))
+            } while (cursor.moveToNext())
+        }
+
+        cursor.close()
+        return rutinas
     }
 }

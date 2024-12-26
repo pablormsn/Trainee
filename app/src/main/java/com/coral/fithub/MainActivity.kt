@@ -1,5 +1,6 @@
 package com.coral.fithub
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
 
         // Eventos de clic
         gymButton.setOnClickListener {
+            val intent = Intent(this, RutinaListActivity::class.java)
+            startActivity(intent)
             Toast.makeText(this, "Gimnasio seleccionado", Toast.LENGTH_SHORT).show()
         }
     }

@@ -65,32 +65,14 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `Trainee`.`Usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `Trainee`.`Usuario` (
-  `idUsuario` INT NOT NULL,
-  `peso` DOUBLE NULL,
-  `idEntrenamiento` INT NULL,
-  `idRutina` INT NULL,
-  PRIMARY KEY (`idUsuario`),
-  UNIQUE INDEX `idUsuario_UNIQUE` (`idUsuario` ASC) VISIBLE)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `Trainee`.`Rutina`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `Trainee`.`Rutina` (
   `idRutina` INT NOT NULL,
   `Nombre` VARCHAR(45) NOT NULL,
-  `idUsuario` INT NOT NULL,
-  PRIMARY KEY (`idRutina`, `idUsuario`),
-  INDEX `fk_Rutina_Usuario1_idx` (`idUsuario` ASC) VISIBLE,
-  CONSTRAINT `fk_Rutina_Usuario1`
-    FOREIGN KEY (`idUsuario`)
-    REFERENCES `Trainee`.`Usuario` (`idUsuario`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+  `Descripcion` VARCHAR(45) NULL,
+  PRIMARY KEY (`idRutina`),
+  INDEX `fk_Rutina_Usuario1_idx` (`idUsuario` ASC) VISIBLE)
 ENGINE = InnoDB;
 
 
@@ -124,18 +106,11 @@ CREATE TABLE IF NOT EXISTS `Trainee`.`Entrenamiento` (
   `fechaRealizacion` DATE NULL,
   `pesoTotal` FLOAT NULL,
   `idRutina` INT NOT NULL,
-  `idUsuario` INT NOT NULL,
-  PRIMARY KEY (`idEntrenamiento`, `idRutina`, `idUsuario`),
+  PRIMARY KEY (`idEntrenamiento`, `idRutina`),
   INDEX `fk_Entrenamiento_Rutina1_idx` (`idRutina` ASC) VISIBLE,
-  INDEX `fk_Entrenamiento_Usuario1_idx` (`idUsuario` ASC) VISIBLE,
   CONSTRAINT `fk_Entrenamiento_Rutina1`
     FOREIGN KEY (`idRutina`)
     REFERENCES `Trainee`.`Rutina` (`idRutina`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Entrenamiento_Usuario1`
-    FOREIGN KEY (`idUsuario`)
-    REFERENCES `Trainee`.`Usuario` (`idUsuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
