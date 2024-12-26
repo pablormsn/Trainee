@@ -1,14 +1,15 @@
 package com.coral.fithub.data.model
 
 import androidx.room.*
+
 @Entity(
-    tableName = "RutinaEjercicio",
-    primaryKeys = ["idRutina", "idEjercicio"],
+    tableName = "MusculoEjercicio",
+    primaryKeys = ["idMusculo", "idEjercicio"],
     foreignKeys = [
         ForeignKey(
-            entity = Rutina::class,
-            parentColumns = ["idRutina"],
-            childColumns = ["idRutina"],
+            entity = Musculo::class,
+            parentColumns = ["idMusculo"],
+            childColumns = ["idMusculo"],
             onDelete = ForeignKey.CASCADE
         ),
         ForeignKey(
@@ -19,9 +20,10 @@ import androidx.room.*
         )
     ]
 )
+class MusculoEjercicio (
 
-data class RutinaEjercicio (
-    val idRutina: Int,
+    val idMusculo: Int,
+
 
     val idEjercicio: Int
 )

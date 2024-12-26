@@ -34,26 +34,12 @@ CREATE TABLE IF NOT EXISTS Serie (
 );
 
 -- -----------------------------------------------------
--- Table `Usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS Usuario (
-  idUsuario INTEGER NOT NULL PRIMARY KEY,
-  email TEXT NOT NULL UNIQUE,
-  contraseña TEXT NOT NULL,
-  peso REAL,
-  idEntrenamiento INTEGER,
-  idRutina INTEGER
-);
-
--- -----------------------------------------------------
 -- Table `Rutina`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS Rutina (
   idRutina INTEGER NOT NULL,
   Nombre TEXT NOT NULL,
-  idUsuario INTEGER NOT NULL,
-  PRIMARY KEY (idRutina, idUsuario),
-  FOREIGN KEY (idUsuario) REFERENCES Usuario (idUsuario)
+  PRIMARY KEY (idRutina)
 );
 
 -- -----------------------------------------------------
@@ -61,10 +47,10 @@ CREATE TABLE IF NOT EXISTS Rutina (
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS RutinaEjercicio (
   idRutina INTEGER NOT NULL,
-  dEjercicio INTEGER NOT NULL,
-  PRIMARY KEY (idRutina, dEjercicio),
+  idEjercicio INTEGER NOT NULL,
+  PRIMARY KEY (idRutina, idEjercicio),
   FOREIGN KEY (idRutina) REFERENCES Rutina (idRutina),
-  FOREIGN KEY (dEjercicio) REFERENCES Ejercicio (idEjercicio)
+  FOREIGN KEY (idEjercicio) REFERENCES Ejercicio (idEjercicio)
 );
 
 -- -----------------------------------------------------
@@ -75,8 +61,6 @@ CREATE TABLE IF NOT EXISTS Entrenamiento (
   fechaRealizacion TEXT, -- ISO8601 format (YYYY-MM-DD)
   pesoTotal REAL,
   idRutina INTEGER NOT NULL,
-  idUsuario INTEGER NOT NULL,
-  PRIMARY KEY (idEntrenamiento, idRutina, idUsuario),
-  FOREIGN KEY (idRutina) REFERENCES Rutina (idRutina),
-  FOREIGN KEY (idUsuario) REFERENCES Usuario (idUsuario)
+  PRIMARY KEY (idEntrenamiento, idRutina),
+  FOREIGN KEY (idRutina) REFERENCES Rutina (idRutina)
 );
