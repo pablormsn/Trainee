@@ -4,8 +4,11 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.coral.fithub.data.DatabaseHelper
 import com.coral.fithub.adapter.RutinaAdapter
+import com.coral.fithub.data.database.DatabaseProvider
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class RutinaListActivity : AppCompatActivity() {
 
@@ -18,11 +21,12 @@ class RutinaListActivity : AppCompatActivity() {
         recyclerView.layoutManager = LinearLayoutManager(this)
 
         // Obtener rutinas desde la base de datos
-        val dbHelper = DatabaseHelper(this)
-        val rutinas = dbHelper.getAllRutinas()
+        val db = DatabaseProvider.getDatabase(this)
+        val ejercicioDao = db.ejercicioDao()
 
-        // Asignar adapter al RecyclerView
-        val adapter = RutinaAdapter(rutinas)
-        recyclerView.adapter = adapter
+        // Ejemplo de uso
+        CoroutineScope(Dispatchers.IO).launch {
+            val ejercicios = ejercicioDao.getAll()
+        }
     }
 }

@@ -19,5 +19,7 @@ data class Ejercicio (
     @PrimaryKey(autoGenerate = true)
     val idEjercicio: Int,
 
-    val mejorMarca: Float?
+    val mejorMarca: Float?,
+
+    val nombre: String
 )
