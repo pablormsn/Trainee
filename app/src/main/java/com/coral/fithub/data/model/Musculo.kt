@@ -1,7 +1,6 @@
 package com.coral.fithub.data.model
-
-import androidx.annotation.NonNull
 import androidx.room.*
+import androidx.room.Entity
 
 @Entity(tableName = "Musculo")
 data class Musculo (
@@ -10,5 +9,5 @@ data class Musculo (
 
     val nombre: String,
 
-    val enum:  GrupoMuscular
+    val grupoMuscular:  GrupoMuscular
 )

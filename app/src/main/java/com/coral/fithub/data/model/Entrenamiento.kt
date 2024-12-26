@@ -1,6 +1,7 @@
 package com.coral.fithub.data.model
 
 import androidx.room.*
+import org.w3c.dom.Text
 import java.time.LocalDate
 
 @Entity(
@@ -15,8 +16,9 @@ import java.time.LocalDate
     ]
 )
 data class Entrenamiento (
+    @PrimaryKey(autoGenerate = true)
     val idEntrenamiento: Int,
-    val fechaRealizacion: LocalDate,
+    val fechaRealizacion: String,
     val pesoTotal: Float,
     val idRutina: Int
 )

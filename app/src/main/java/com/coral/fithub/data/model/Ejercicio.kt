@@ -21,5 +21,7 @@ data class Ejercicio (
 
     val mejorMarca: Float?,
 
-    val nombre: String
+    val nombre: String,
+
+    val idRutina: Int
 )

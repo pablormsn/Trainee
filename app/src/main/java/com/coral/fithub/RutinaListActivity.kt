@@ -9,6 +9,7 @@ import com.coral.fithub.data.database.DatabaseProvider
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class RutinaListActivity : AppCompatActivity() {
 
@@ -22,11 +23,14 @@ class RutinaListActivity : AppCompatActivity() {
 
         // Obtener rutinas desde la base de datos
         val db = DatabaseProvider.getDatabase(this)
-        val ejercicioDao = db.ejercicioDao()
+        val rutinaDao = db.rutinaDao()
 
         // Ejemplo de uso
         CoroutineScope(Dispatchers.IO).launch {
-            val ejercicios = ejercicioDao.getAll()
+            val rutinas = rutinaDao.getAll()
+            withContext(Dispatchers.Main) {
+                recyclerView.adapter = RutinaAdapter(rutinas)
+            }
         }
     }
 }
