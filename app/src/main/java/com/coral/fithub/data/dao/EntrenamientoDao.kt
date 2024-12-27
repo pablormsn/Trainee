@@ -15,7 +15,7 @@ interface EntrenamientoDao {
     @Delete
     suspend fun delete(entrenamiento: Entrenamiento)
 
-    @Query("SELECT * FROM entrenamiento WHERE id = :id")
+    @Query("SELECT * FROM entrenamiento WHERE idEntrenamiento = :id")
     suspend fun get(id: Int): Entrenamiento
 
     @Query("SELECT * FROM entrenamiento")

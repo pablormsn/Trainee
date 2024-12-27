@@ -4,6 +4,7 @@ import androidx.room.*
 
 
 @Entity(
+    tableName = "Serie",
     foreignKeys = [
         ForeignKey(
             entity = Ejercicio::class,

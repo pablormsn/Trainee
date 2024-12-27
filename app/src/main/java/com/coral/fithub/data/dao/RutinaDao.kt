@@ -14,7 +14,7 @@ interface RutinaDao {
     @Delete
     suspend fun delete(rutina: Rutina)
 
-    @Query("SELECT * FROM rutina WHERE id = :id")
+    @Query("SELECT * FROM rutina WHERE idRutina = :id")
     suspend fun get(id: Int): Rutina
 
     @Query("SELECT * FROM rutina")

@@ -13,7 +13,7 @@ interface MusculoDao {
     @Delete
     suspend fun delete(musculo: Musculo)
 
-    @Query("SELECT * FROM musculo WHERE id = :id")
+    @Query("SELECT * FROM musculo WHERE idMusculo = :id")
     suspend fun get(id: Int): Musculo
 
     @Query("SELECT * FROM musculo")

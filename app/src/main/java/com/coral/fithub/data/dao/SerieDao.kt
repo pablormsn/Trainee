@@ -18,7 +18,7 @@ interface SerieDao {
     @Delete
     suspend fun delete(serie: Serie)
 
-    @Query("SELECT * FROM serie WHERE id = :id")
+    @Query("SELECT * FROM serie WHERE idSerie = :id")
     suspend fun get(id: Int): Serie
 
     @Query("SELECT * FROM serie")

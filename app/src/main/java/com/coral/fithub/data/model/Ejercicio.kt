@@ -5,15 +5,7 @@ import androidx.room.*
 import java.util.Date
 
 @Entity(
-    tableName = "Ejercicio",
-    foreignKeys = [
-        ForeignKey(
-            entity = Rutina::class,
-            parentColumns = ["idRutina"],
-            childColumns = ["idRutina"],
-            onDelete = ForeignKey.CASCADE
-        )
-    ]
+    tableName = "Ejercicio"
 )
 data class Ejercicio (
     @PrimaryKey(autoGenerate = true)
@@ -21,7 +13,5 @@ data class Ejercicio (
 
     val mejorMarca: Float?,
 
-    val nombre: String,
-
-    val idRutina: Int
+    val nombre: String
 )
