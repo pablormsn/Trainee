@@ -15,7 +15,7 @@ import com.coral.fithub.data.model.Rutina
 import com.coral.fithub.data.model.RutinaEjercicio
 import com.coral.fithub.data.model.Serie
 
-@Database(entities = [Ejercicio::class, Entrenamiento::class, Musculo::class, MusculoEjercicio::class, Rutina::class, RutinaEjercicio::class, Serie::class], version = 1)
+@Database(entities = [Ejercicio::class, Entrenamiento::class, Musculo::class, MusculoEjercicio::class, Rutina::class, RutinaEjercicio::class, Serie::class], version = 2)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun ejercicioDao(): EjercicioDao
     abstract fun entrenamientoDao(): EntrenamientoDao

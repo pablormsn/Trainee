@@ -6,13 +6,13 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/editTextNombre"
+        android:id="@+id/editRutinaNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Nombre de la rutina" />
 
     <EditText
-        android:id="@+id/editTextDescripcion"
+        android:id="@+id/editRutinaDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Descripción de la rutina"

@@ -16,8 +16,8 @@ class AddRutinaActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_rutina)
 
-        val editTextNombre = findViewById<EditText>(R.id.editTextNombre)
-        val editTextDescripcion = findViewById<EditText>(R.id.editTextDescripcion)
+        val editTextNombre = findViewById<EditText>(R.id.editRutinaNombre)
+        val editTextDescripcion = findViewById<EditText>(R.id.editRutinaDescripcion)
         val buttonGuardar = findViewById<Button>(R.id.buttonGuardar)
 
         buttonGuardar.setOnClickListener {

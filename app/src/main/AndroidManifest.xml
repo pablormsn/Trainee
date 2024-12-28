@@ -32,6 +32,9 @@
             android:exported="true"
             android:label="Añadir rutina"
             android:theme="@style/Theme.FitHub" />
+        <activity android:name=".ShowRutinaActivity"
+            android:label="Rutina"
+            android:theme="@style/Theme.FitHub"/>
     </application>
 
 </manifest>

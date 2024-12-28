@@ -28,10 +28,10 @@ class RutinaListActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rutina_list)
 
         // Configurar RecyclerView
-        recyclerView = findViewById<RecyclerView>(R.id.recyclerViewRutinas)
+        recyclerView = findViewById(R.id.recyclerViewRutinas)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        textViewNoRutinas = findViewById<TextView>(R.id.textViewNoRutinas)
+        textViewNoRutinas = findViewById(R.id.textViewNoRutinas)
 
         addRutinaLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
@@ -65,7 +65,10 @@ class RutinaListActivity : AppCompatActivity() {
                     recyclerView.visibility = RecyclerView.GONE
                 } else {
                     textViewNoRutinas.visibility = TextView.GONE
-                    recyclerView.adapter = RutinaAdapter(rutinas)
+                    recyclerView.adapter = RutinaAdapter(rutinas) { rutina ->
+                        val intent = Intent(this@RutinaListActivity, ShowRutinaActivity::class.java)
+                        intent.putExtra("idRutina", rutina.idRutina)
+                        startActivity(intent)}
                 }
             }
         }
