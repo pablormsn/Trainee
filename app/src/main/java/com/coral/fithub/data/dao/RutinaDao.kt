@@ -19,4 +19,5 @@ interface RutinaDao {
 
     @Query("SELECT * FROM rutina")
     suspend fun getAll(): List<Rutina>
+    
 }

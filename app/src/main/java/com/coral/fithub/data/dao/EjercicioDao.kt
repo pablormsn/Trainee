@@ -20,4 +20,8 @@ interface EjercicioDao {
 
     @Query("SELECT * FROM ejercicio")
     suspend fun getAll(): List<Ejercicio>
+    
+//    Obtiene todos los ejercicios de una rutina
+    @Query("SELECT * FROM Ejercicio WHERE idEjercicio IN (SELECT idEjercicio FROM rutinaejercicio WHERE idRutina = :rutinaId)")
+    suspend fun getEjerciciosPorRutina(rutinaId: Int): List<Ejercicio>
 }

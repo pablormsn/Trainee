@@ -16,7 +16,7 @@ class RutinaAdapter(private val rutinas: List<Rutina>) :
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RutinaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_rutina, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_show_rutina, parent, false)
         return RutinaViewHolder(view)
     }
 
