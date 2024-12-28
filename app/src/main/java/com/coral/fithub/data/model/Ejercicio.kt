@@ -1,8 +1,6 @@
 package com.coral.fithub.data.model
 
-import androidx.annotation.*
 import androidx.room.*
-import java.util.Date
 
 @Entity(
     tableName = "Ejercicio"
