@@ -21,4 +21,20 @@
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/textViewEjerciciosRutina"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejercicios:"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEjerciciosRutina"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
 </LinearLayout>
