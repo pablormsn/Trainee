@@ -37,6 +37,7 @@ class AddRutinaActivity : AppCompatActivity() {
 
         buttonAddEjercicios.setOnClickListener {
             val intent = Intent(this, SelectEjerciciosActivity::class.java)
+            intent.putParcelableArrayListExtra("selectedEjercicios", ArrayList(selectedEjercicios))
             startActivityForResult(intent, 1)
         }
 
@@ -60,6 +61,7 @@ class AddRutinaActivity : AppCompatActivity() {
                         val rutinaEjercicio = RutinaEjercicio(rutinaId, ejercicio.idEjercicio)
                         db.rutinaEjercicioDao().insert(rutinaEjercicio)
                     }
+                    setResult(Activity.RESULT_OK)
                     finish() // Cerrar la actividad después de guardar
                 }
             }

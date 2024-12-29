@@ -12,10 +12,11 @@ import com.coral.fithub.data.model.Ejercicio
 
 class EjercicioAdapter(
     private val ejercicios: List<Ejercicio>,
+    selectedEjercicios: List<Ejercicio>,
     private val onItemCheckedChangeListener: (Ejercicio, Boolean) -> Unit
 ) : RecyclerView.Adapter<EjercicioAdapter.EjercicioViewHolder>() {
 
-    val selectedEjercicios = mutableSetOf<Ejercicio>()
+    val selectedEjercicios = mutableSetOf<Ejercicio>().apply { addAll(selectedEjercicios) }
 
     inner class EjercicioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombre: TextView = itemView.findViewById(R.id.textEjercicioNombre)

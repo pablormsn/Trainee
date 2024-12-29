@@ -31,10 +31,13 @@ class SelectEjerciciosActivity : AppCompatActivity() {
         val db = DatabaseProvider.getDatabase(this)
         val ejercicioDao = db.ejercicioDao()
 
+        //Obtener los ejercicios seleccionados previamente
+        val selectedEjercicios = intent.getParcelableArrayListExtra<Ejercicio>("selectedEjercicios") ?: arrayListOf()
+
         CoroutineScope(Dispatchers.IO).launch {
             val ejercicios = ejercicioDao.getAll()
             withContext(Dispatchers.Main) {
-                ejercicioAdapter = EjercicioAdapter(ejercicios) { ejercicio, isChecked ->
+                ejercicioAdapter = EjercicioAdapter(ejercicios, selectedEjercicios) { ejercicio, isChecked ->
                     if (isChecked) {
                         ejercicioAdapter.selectedEjercicios.add(ejercicio)
                     } else {
