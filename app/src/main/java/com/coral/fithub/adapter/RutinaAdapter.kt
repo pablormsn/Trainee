@@ -16,7 +16,7 @@ class RutinaAdapter(
     RecyclerView.Adapter<RutinaAdapter.RutinaViewHolder>() {
 
     inner class RutinaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val rutinaName: TextView = itemView.findViewById(R.id.textRutinaNombre)
+        val rutinaName: TextView = itemView.findViewById(R.id.textRutNombre)
 
         init {
             itemView.setOnClickListener{
@@ -29,7 +29,7 @@ class RutinaAdapter(
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RutinaViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_show_rutina, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_rutina, parent, false)
         return RutinaViewHolder(view)
     }
 

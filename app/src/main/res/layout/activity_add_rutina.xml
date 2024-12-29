@@ -19,6 +19,23 @@
         android:layout_marginTop="16dp" />
 
     <Button
+        android:id="@+id/buttonAddEjercicios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir ejercicios"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/textViewEjerciciosAnadidos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ejercicios añadidos:"
+        android:layout_marginTop="16dp"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:visibility="gone" />
+
+    <Button
         android:id="@+id/buttonGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

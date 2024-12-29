@@ -1,0 +1,22 @@
+<!-- filepath: /c:/Users/probl/Desktop/FitHub/app/src/main/res/layout/activity_select_ejercicios.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEjercicios"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/buttonGuardarEjercicios"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar ejercicios"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

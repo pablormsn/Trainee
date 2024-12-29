@@ -35,6 +35,9 @@
         <activity android:name=".ShowRutinaActivity"
             android:label="Rutina"
             android:theme="@style/Theme.FitHub"/>
+        <activity android:name=".SelectEjerciciosActivity"
+            android:label="Seleccionar ejercicios"
+            android:theme="@style/Theme.FitHub"/>
     </application>
 
 </manifest>
