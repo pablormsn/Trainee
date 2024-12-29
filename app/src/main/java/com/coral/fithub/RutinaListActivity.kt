@@ -16,6 +16,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
+import com.coral.fithub.data.model.Rutina
 
 class RutinaListActivity : AppCompatActivity() {
 
@@ -65,11 +66,27 @@ class RutinaListActivity : AppCompatActivity() {
                     recyclerView.visibility = RecyclerView.GONE
                 } else {
                     textViewNoRutinas.visibility = TextView.GONE
-                    recyclerView.adapter = RutinaAdapter(rutinas) { rutina ->
+                    recyclerView.visibility = RecyclerView.VISIBLE
+                    recyclerView.adapter = RutinaAdapter(rutinas, { rutina ->
                         val intent = Intent(this@RutinaListActivity, ShowRutinaActivity::class.java)
                         intent.putExtra("idRutina", rutina.idRutina)
-                        startActivity(intent)}
+                        startActivity(intent)
+                    }, { rutina ->
+                        deleteRutina(rutina)
+                    })
                 }
+            }
+        }
+    }
+
+    private fun deleteRutina(rutina: Rutina) {
+        val db = DatabaseProvider.getDatabase(this)
+        val rutinaDao = db.rutinaDao()
+
+        CoroutineScope(Dispatchers.IO).launch {
+            rutinaDao.delete(rutina)
+            withContext(Dispatchers.Main) {
+                loadRutinas()
             }
         }
     }
