@@ -45,18 +45,6 @@
             android:gravity="center"
             android:textStyle="bold" />
 
-<<<<<<< Updated upstream
-        <!-- Columna de Completado -->
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/exercise_completed"
-            android:gravity="center"
-            android:textStyle="bold" />
-
-=======
->>>>>>> Stashed changes
     </LinearLayout>
 
     <!-- RecyclerView para las Series -->
@@ -74,20 +62,9 @@
         android:id="@+id/buttonAddSerie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-<<<<<<< Updated upstream
-        android:layout_marginTop="16dp"
-        android:background="@color/white"
-        android:gravity="center"
-        android:text="@string/add_set"
-        android:textColor="@android:color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-=======
         android:layout_marginTop="8dp"
-        android:text="Añadir Serie"
+        android:text="@string/add_set"
         app:layout_constraintTop_toBottomOf="@id/recyclerViewSeries"
->>>>>>> Stashed changes
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 

@@ -26,27 +26,11 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-<<<<<<< Updated upstream
                 android:ellipsize="end"
                 android:gravity="start|center_vertical"
                 android:maxLines="1"
-                android:text="@string/set"
+                android:text="Peso"
                 android:textSize="16sp" />
-
-            <!-- Peso -->
-            <EditText
-                android:id="@+id/editTextWeight"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:hint="Peso"
-                android:inputType="numberDecimal"
-                android:textSize="14sp"
-                android:padding="4dp"/>
-=======
-                android:text="Peso (kg)"
-                android:textSize="16sp"
-                android:padding="4dp" />
->>>>>>> Stashed changes
 
             <!-- Repeticiones -->
             <TextView
@@ -58,19 +42,5 @@
                 android:textSize="16sp"
                 android:padding="4dp" />
         </LinearLayout>
-<<<<<<< Updated upstream
-
-        <!-- Botón de eliminar, que aparecerá al deslizar -->
-        <Button
-            android:id="@+id/deleteButton"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="@string/delete"
-            android:visibility="gone"
-            android:background="?android:attr/selectableItemBackground"
-            android:onClick="onDeleteClicked"/>
-
-=======
->>>>>>> Stashed changes
     </FrameLayout>
 </androidx.cardview.widget.CardView>
