@@ -38,6 +38,7 @@
         <activity android:name=".SelectEjerciciosActivity"
             android:label="Seleccionar ejercicios"
             android:theme="@style/Theme.FitHub"/>
+        <activity android:name=".ShowEjercicioActivity"/>
     </application>
 
 </manifest>

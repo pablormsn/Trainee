@@ -4,17 +4,28 @@ package com.coral.fithub.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.coral.fithub.R
 import com.coral.fithub.data.model.Ejercicio
 
 class EjerciciosRutinaAdapter(
-    private val ejercicios: List<Ejercicio>
+    private val ejercicios: List<Ejercicio>,
+    private val onItemClickListener: (Ejercicio) -> Unit
 ) : RecyclerView.Adapter<EjerciciosRutinaAdapter.EjercicioViewHolder>() {
 
     inner class EjercicioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nombre: TextView = itemView.findViewById(R.id.textEjercicioNombre)
+
+        init {
+            itemView.setOnClickListener{
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION){
+                    onItemClickListener(ejercicios[position])
+                }
+            }
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EjercicioViewHolder {

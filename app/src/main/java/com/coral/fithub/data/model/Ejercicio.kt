@@ -11,7 +11,7 @@ data class Ejercicio (
     @PrimaryKey(autoGenerate = true)
     val idEjercicio: Int,
 
-    val mejorMarca: Float?,
+    var mejorMarca: Float?,
 
     val nombre: String
 ) : Parcelable {

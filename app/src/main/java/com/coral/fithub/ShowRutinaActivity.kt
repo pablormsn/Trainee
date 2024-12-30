@@ -1,5 +1,6 @@
 package com.coral.fithub
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -43,7 +44,11 @@ class ShowRutinaActivity : AppCompatActivity() {
                     textViewDescripcion.text = rutina.descripcion
 
                     recyclerViewEjercicios.layoutManager = LinearLayoutManager(this@ShowRutinaActivity)
-                    recyclerViewEjercicios.adapter = EjerciciosRutinaAdapter(ejercicios)
+                    recyclerViewEjercicios.adapter = EjerciciosRutinaAdapter(ejercicios) { ejercicio ->
+                        val intent = Intent(this@ShowRutinaActivity, ShowEjercicioActivity::class.java)
+                        intent.putExtra("idEjercicio", ejercicio.idEjercicio)
+                        startActivity(intent)
+                    }
                 }
             }
         }
