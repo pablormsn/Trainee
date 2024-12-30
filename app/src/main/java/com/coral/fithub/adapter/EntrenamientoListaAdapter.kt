@@ -11,7 +11,8 @@ import com.coral.fithub.data.model.Entrenamiento
 
 class EntrenamientoListaAdapter(
     private val entrenamientos: List<Entrenamiento>,
-    private val onDeleteClickListener: (Entrenamiento) -> Unit
+    private val onDeleteClickListener: (Entrenamiento) -> Unit,
+    private val onItemClickListener: (Entrenamiento) -> Unit
 ) : RecyclerView.Adapter<EntrenamientoListaAdapter.EntrenamientoViewHolder>() {
 
     inner class EntrenamientoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -19,6 +20,12 @@ class EntrenamientoListaAdapter(
         val deleteButton: ImageButton = itemView.findViewById(R.id.buttonDeleteEntrenamiento)
 
         init {
+            itemView.setOnClickListener {
+                val position = adapterPosition
+                if (position != RecyclerView.NO_POSITION) {
+                    onItemClickListener(entrenamientos[position])
+                }
+            }
             deleteButton.setOnClickListener {
                 val position = adapterPosition
                 if (position != RecyclerView.NO_POSITION) {

@@ -17,6 +17,7 @@ class EntrenamientoActivity : AppCompatActivity() {
    override fun onCreate(savedInstanceState: Bundle?) {
        super.onCreate(savedInstanceState)
        setContentView(R.layout.activity_entrenamiento)
+       supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
        val idEntrenamiento = intent.getIntExtra("idEntrenamiento", -1)
 

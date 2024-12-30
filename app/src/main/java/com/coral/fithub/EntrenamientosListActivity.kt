@@ -1,5 +1,6 @@
 package com.coral.fithub
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -49,6 +50,11 @@ class EntrenamientosListActivity : AppCompatActivity() {
                     entrenamientoAdapter = EntrenamientoListaAdapter(entrenamientos.toMutableList(),
                         onDeleteClickListener = { entrenamiento ->
                             deleteEntrenamiento(entrenamiento)
+                        },
+                        onItemClickListener = { entrenamiento ->
+                            val intent = Intent(this@EntrenamientosListActivity, ShowEntrenamientoActivity::class.java)
+                            intent.putExtra("idEntrenamiento", entrenamiento.idEntrenamiento)
+                            startActivity(intent)
                         })
                     recyclerViewEntrenamientos.adapter = entrenamientoAdapter
                 }

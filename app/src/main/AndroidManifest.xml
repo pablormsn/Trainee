@@ -42,6 +42,7 @@
             android:parentActivityName=".EjerciciosListActivity" />
         <activity android:name=".EntrenamientoActivity"
             android:label="@string/entrenamiento_message"
+            android:parentActivityName=".EntrenamientosListActivity"
             android:theme="@style/Theme.FitHub"/>
         <activity android:name=".EjerciciosListActivity"
             android:parentActivityName=".MainActivity"
@@ -55,6 +56,10 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.FitHub"/>
         <!--TRADUCIR-->
+        <activity android:name=".ShowEntrenamientoActivity"
+            android:label="Entrenamiento"
+            android:parentActivityName=".EntrenamientosListActivity"
+            android:theme="@style/Theme.FitHub"/>
     </application>
 
 </manifest>

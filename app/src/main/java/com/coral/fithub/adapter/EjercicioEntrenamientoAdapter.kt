@@ -19,7 +19,8 @@ import kotlinx.coroutines.withContext
 
 class EjercicioEntrenamientoAdapter(
     private val listaDeEjercicios: List<Ejercicio>,
-    private val idEntrenamiento: Int
+    private val idEntrenamiento: Int,
+    private val showAddSerieButton: Boolean = true
 ) : RecyclerView.Adapter<EjercicioEntrenamientoAdapter.EjercicioEntrenamientoViewHolder>() {
 
     class EjercicioEntrenamientoViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -42,13 +43,18 @@ class EjercicioEntrenamientoAdapter(
         holder.recyclerViewSeries.layoutManager = LinearLayoutManager(holder.itemView.context)
         loadSeries(holder, ejercicio.idEjercicio)
 
-        holder.buttonAddSerie.setOnClickListener {
-            val context = holder.itemView.context
-            val intent = Intent(context, AddSerieActivity::class.java).apply {
-                putExtra("idEjercicio", ejercicio.idEjercicio)
-                putExtra("idEntrenamiento", idEntrenamiento)
+        if (showAddSerieButton) {
+            holder.buttonAddSerie?.visibility = View.VISIBLE
+            holder.buttonAddSerie?.setOnClickListener {
+                val context = holder.itemView.context
+                val intent = Intent(context, AddSerieActivity::class.java).apply {
+                    putExtra("idEjercicio", ejercicio.idEjercicio)
+                    putExtra("idEntrenamiento", idEntrenamiento)
+                }
+                context.startActivity(intent)
             }
-            context.startActivity(intent)
+        } else {
+            holder.buttonAddSerie?.visibility = View.GONE
         }
     }
 
