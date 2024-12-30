@@ -20,7 +20,7 @@
             android:layout_height="65dp"
             android:src="@drawable/exs"
             android:background="@drawable/gym_button"
-            android:contentDescription="Icono de ejercicio" />
+            android:contentDescription="@string/exercise_icon" />
 
         <TextView
             android:id="@+id/textEjercicioNombreMain"

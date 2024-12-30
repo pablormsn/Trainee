@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/gym_button"
-        android:queryHint="Buscar ejercicios" />
+        android:queryHint="@string/search_exercises"/>
 
     <Spinner
         android:id="@+id/spinnerMusculos"

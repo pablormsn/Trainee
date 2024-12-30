@@ -25,7 +25,7 @@
             android:id="@+id/buttonEditarRutinaNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar" />
+            android:text="@string/edit_message" />
     </LinearLayout>
 
     <LinearLayout
@@ -41,19 +41,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Nuevo nombre" />
+            android:hint="@string/new_name" />
 
         <Button
             android:id="@+id/buttonGuardarNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guardar" />
+            android:text="@string/save" />
 
         <Button
             android:id="@+id/buttonCancelarNombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar" />
+            android:text="@string/cancel" />
     </LinearLayout>
 
     <LinearLayout
@@ -75,7 +75,7 @@
             android:id="@+id/buttonEditarRutinaDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar" />
+            android:text="@string/edit_message" />
     </LinearLayout>
 
     <LinearLayout
@@ -91,19 +91,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="Nueva descripción" />
+            android:hint="@string/new_description" />
 
         <Button
             android:id="@+id/buttonGuardarDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guardar" />
+            android:text="@string/save" />
 
         <Button
             android:id="@+id/buttonCancelarDescripcion"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Cancelar" />
+            android:text="@string/cancel" />
     </LinearLayout>
 
     <LinearLayout
@@ -117,7 +117,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Ejercicios:"
+            android:text="@string/exercise_twodots"
             android:textSize="18sp"
             android:textColor="@android:color/black"
             android:padding="8dp" />
@@ -126,14 +126,14 @@
             android:id="@+id/buttonEditarEjerciciosRutina"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar" />
+            android:text="@string/edit_message" />
     </LinearLayout>
 
     <TextView
         android:id="@+id/textViewNoEjercicios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="No hay ejercicios en la rutina"
+        android:text="@string/no_exercises"
         android:textSize="18sp"
         android:textColor="@android:color/black"
         android:gravity="center"

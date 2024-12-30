@@ -17,6 +17,6 @@
         android:id="@+id/buttonGuardarEjercicios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar ejercicios"
+        android:text="@string/save_exercises"
         android:layout_marginTop="16dp" />
 </LinearLayout>

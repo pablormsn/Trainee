@@ -20,7 +20,7 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@drawable/rutina"
-            android:contentDescription="Icono de rutina" />
+            android:contentDescription="@string/routine_icon" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -48,14 +48,14 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     app:srcCompat="@android:drawable/ic_media_play"
-                    android:contentDescription="Iniciar entrenamiento" />
+                    android:contentDescription="@string/start_training" />
 
                 <ImageButton
                     android:id="@+id/buttonDeleteRutina"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_delete"
-                    android:contentDescription="Borrar rutina" />
+                    android:contentDescription="@string/delete_routine" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

@@ -29,7 +29,7 @@
                 android:ellipsize="end"
                 android:gravity="start|center_vertical"
                 android:maxLines="1"
-                android:text="Serie 1"
+                android:text="@string/set"
                 android:textSize="16sp" />
 
             <!-- Peso -->
@@ -65,7 +65,7 @@
             android:id="@+id/deleteButton"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="Eliminar"
+            android:text="@string/delete"
             android:visibility="gone"
             android:background="?android:attr/selectableItemBackground"
             android:onClick="onDeleteClicked"/>

@@ -39,14 +39,14 @@
             android:id="@+id/buttonEditarMejorMarca"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Editar" />
+            android:text="@string/edit_message" />
     </LinearLayout>
 
     <EditText
         android:id="@+id/editTextNuevaMejorMarca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nueva mejor marca"
+        android:hint="@string/new_record"
         android:inputType="numberDecimal"
         android:padding="8dp"
         android:visibility="gone" />
@@ -55,7 +55,7 @@
         android:id="@+id/buttonGuardarMejorMarca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar mejor marca"
+        android:text="@string/save_new_record"
         android:layout_marginTop="16dp"
         android:visibility="gone" />
 

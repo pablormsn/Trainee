@@ -9,10 +9,10 @@
         android:id="@+id/textViewNoRutinas"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="El usuario no tiene rutinas"
+        android:text="@string/no_routines"
         android:visibility="gone"
         android:textSize="18sp"
-        android:textColor="@android:color/black"
+        android:textColor="@android:color/white"
         android:gravity="center"
         android:padding="16dp" />
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:layout_margin="16dp"
-        android:contentDescription="Añadir rutina"
+        android:contentDescription="@string/add_routine"
         android:src="@drawable/ic_add"
         android:tint="@android:color/white"
         app:backgroundTint="@color/blue" />
