@@ -24,5 +24,7 @@ data class Serie (
 
     var completado: Int,
 
-    var idEjercicio:Int
+    var idEjercicio:Int,
+
+    var idEntrenamiento: Int
 )
