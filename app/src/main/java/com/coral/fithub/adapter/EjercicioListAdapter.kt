@@ -4,17 +4,19 @@ package com.coral.fithub.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.coral.fithub.R
 import com.coral.fithub.data.model.Ejercicio
 
 class EjercicioListAdapter(
-    private val ejercicios: List<Ejercicio>,
+    private var ejercicios: List<Ejercicio>,
     private val onItemClickListener: (Ejercicio) -> Unit
 ) : RecyclerView.Adapter<EjercicioListAdapter.EjercicioViewHolder>() {
 
     inner class EjercicioViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        val icono: ImageView = itemView.findViewById(R.id.iconEjercicio)
         val nombre: TextView = itemView.findViewById(R.id.textEjercicioNombreMain)
 
         init {
@@ -35,7 +37,13 @@ class EjercicioListAdapter(
     override fun onBindViewHolder(holder: EjercicioViewHolder, position: Int) {
         val ejercicio = ejercicios[position]
         holder.nombre.text = ejercicio.nombre
+        holder.icono.setImageResource(R.drawable.exs) // Set the icon for each exercise
     }
 
     override fun getItemCount() = ejercicios.size
+
+    fun updateList(newEjercicios: List<Ejercicio>) {
+        ejercicios = newEjercicios
+        notifyDataSetChanged()
+    }
 }

@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.coral.fithub.R
 import com.coral.fithub.data.model.Serie
 
-class SeriesAdapter(
+class SerieAdapter(
     private val seriesList: List<Serie>, // Lista de datos
     private val onDelete: (Serie) -> Unit, // Acción para eliminar una serie
     private val onSerieUpdated: (Serie) -> Unit // Acción para actualizar una serie
-) : RecyclerView.Adapter<SeriesAdapter.SeriesViewHolder>() {
+) : RecyclerView.Adapter<SerieAdapter.SeriesViewHolder>() {
 
     // 1. Crear el ViewHolder (inicializa las vistas)
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SeriesViewHolder {
