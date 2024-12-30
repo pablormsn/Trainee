@@ -31,6 +31,6 @@
         android:contentDescription="Añadir rutina"
         android:src="@drawable/ic_add"
         android:tint="@android:color/white"
-        app:backgroundTint="#009688" />
+        app:backgroundTint="@color/blue" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
