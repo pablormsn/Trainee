@@ -41,11 +41,19 @@
             android:label="@string/exercises_message"
             android:parentActivityName=".EjerciciosListActivity" />
         <activity android:name=".EntrenamientoActivity"
+<<<<<<< Updated upstream
             android:label="@string/entrenamiento_message"
+=======
+            android:label="Entrenamiento"
+            android:parentActivityName=".RutinaListActivity"
+>>>>>>> Stashed changes
             android:theme="@style/Theme.FitHub"/>
         <activity android:name=".EjerciciosListActivity"
             android:parentActivityName=".MainActivity"
             android:label="@string/ejercicios_message"
+            android:theme="@style/Theme.FitHub"/>
+        <activity android:name=".AddSerieActivity"
+            android:label="Añadir serie"
             android:theme="@style/Theme.FitHub"/>
     </application>
 

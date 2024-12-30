@@ -18,30 +18,36 @@ class EntrenamientoActivity : AppCompatActivity() {
        super.onCreate(savedInstanceState)
        setContentView(R.layout.activity_entrenamiento)
 
-       val idRutina = intent.getIntExtra("idRutina", -1)
+       val idEntrenamiento = intent.getIntExtra("idEntrenamiento", -1)
 
-       if (idRutina != -1) {
+       if (idEntrenamiento != -1) {
            val db = DatabaseProvider.getDatabase(this)
-              val rutinaDao = db.rutinaDao()
-              val rutinaEjercicioDao = db.rutinaEjercicioDao()
-              val ejercicioDao = db.ejercicioDao()
+           val entrenamientoDao = db.entrenamientoDao()
+           val rutinaDao = db.rutinaDao()
+           val ejercicioDao = db.ejercicioDao()
 
-              CoroutineScope(Dispatchers.IO).launch {
-                  val rutina = rutinaDao.get(idRutina)
-                  val ejercicios = ejercicioDao.getEjerciciosPorRutina(idRutina)
+           CoroutineScope(Dispatchers.IO).launch {
+               val entrenamiento = entrenamientoDao.get(idEntrenamiento)
+               val rutina = rutinaDao.get(entrenamiento.idRutina)
+               val ejercicios = ejercicioDao.getEjerciciosPorRutina(entrenamiento.idRutina)
 
-                  print(ejercicios)
-                  withContext(Dispatchers.Main) {
-                      val textViewNombre = findViewById<TextView>(R.id.textRutinaNombre)
-                      val recyclerViewEjercicios =
-                          findViewById<RecyclerView>(R.id.recyclerViewEjercicios)
+               withContext(Dispatchers.Main) {
+                   val textViewNombre = findViewById<TextView>(R.id.textRutinaNombreEntrenamiento)
+                   val recyclerViewEjercicios = findViewById<RecyclerView>(R.id.recyclerViewEjerciciosEntrenamiento)
 
-                      textViewNombre.text = rutina.nombre
+                   textViewNombre.text = rutina.nombre
 
-                      recyclerViewEjercicios.layoutManager = LinearLayoutManager(this@EntrenamientoActivity)
-                      recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(ejercicios, rutina.nombre)
-                  }
-              }
+                   recyclerViewEjercicios.layoutManager = LinearLayoutManager(this@EntrenamientoActivity)
+                   recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(ejercicios, idEntrenamiento)
+               }
+           }
        }
    }
+
+    override fun onResume() {
+        super.onResume()
+        // Recargar los datos cuando se vuelve a la actividad
+        val recyclerViewEjercicios = findViewById<RecyclerView>(R.id.recyclerViewEjerciciosEntrenamiento)
+        recyclerViewEjercicios.adapter?.notifyDataSetChanged()
+    }
 }

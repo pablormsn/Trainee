@@ -9,16 +9,15 @@
     android:background="#124250"
     tools:context=".MainActivity">
 
-    <!-- Título de la App -->
+    <!-- Título de la aplicación -->
     <TextView
-        android:id="@+id/title"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Trainee"
-        android:textSize="42sp"
-        android:textColor="@android:color/darker_gray"
-        android:gravity="center"
-        android:paddingBottom="16dp" />
+        android:text="Bienvenido a Trainee"
+        android:textSize="32sp"
+        android:textColor="@android:color/white"
+        android:layout_gravity="center"
+        android:layout_marginBottom="16dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

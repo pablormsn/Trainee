@@ -23,4 +23,7 @@ interface SerieDao {
 
     @Query("SELECT * FROM serie")
     suspend fun getAll(): List<Serie>
+
+    @Query("SELECT * FROM serie WHERE idEjercicio = :idEjercicio AND idEntrenamiento = :idEntrenamiento")
+    suspend fun getSeriesByEjercicioAndEntrenamiento(idEjercicio: Int, idEntrenamiento: Int): List<Serie>
 }

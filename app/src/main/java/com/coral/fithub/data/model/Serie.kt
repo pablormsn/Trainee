@@ -22,8 +22,6 @@ data class Serie (
 
     var repeticiones: Int?,
 
-    var completado: Int,
-
     var idEjercicio:Int,
 
     var idEntrenamiento: Int

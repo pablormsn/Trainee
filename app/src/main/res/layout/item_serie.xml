@@ -20,12 +20,13 @@
             android:orientation="horizontal"
             android:padding="8dp">
 
-            <!-- Aquí van los datos de la serie, como el nombre del ejercicio, peso, repeticiones -->
+            <!-- Peso -->
             <TextView
-                android:id="@+id/textSerie"
-                android:layout_width="152dp"
+                android:id="@+id/textPeso"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+<<<<<<< Updated upstream
                 android:ellipsize="end"
                 android:gravity="start|center_vertical"
                 android:maxLines="1"
@@ -41,24 +42,23 @@
                 android:inputType="numberDecimal"
                 android:textSize="14sp"
                 android:padding="4dp"/>
+=======
+                android:text="Peso (kg)"
+                android:textSize="16sp"
+                android:padding="4dp" />
+>>>>>>> Stashed changes
 
             <!-- Repeticiones -->
-            <EditText
-                android:id="@+id/editTextReps"
-                android:layout_width="80dp"
+            <TextView
+                android:id="@+id/textRepeticiones"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:hint="Reps"
-                android:inputType="number"
-                android:textSize="14sp"
-                android:padding="4dp"/>
-
-            <!-- CheckBox para marcar si se completó -->
-            <CheckBox
-                android:id="@+id/checkBoxCompleted"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Repeticiones"
+                android:textSize="16sp"
                 android:padding="4dp" />
         </LinearLayout>
+<<<<<<< Updated upstream
 
         <!-- Botón de eliminar, que aparecerá al deslizar -->
         <Button
@@ -70,5 +70,7 @@
             android:background="?android:attr/selectableItemBackground"
             android:onClick="onDeleteClicked"/>
 
+=======
+>>>>>>> Stashed changes
     </FrameLayout>
 </androidx.cardview.widget.CardView>

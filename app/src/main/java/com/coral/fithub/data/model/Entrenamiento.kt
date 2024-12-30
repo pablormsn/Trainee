@@ -18,7 +18,7 @@ import java.time.LocalDate
 data class Entrenamiento (
     @PrimaryKey(autoGenerate = true)
     val idEntrenamiento: Int,
-    val fechaRealizacion: Long,
-    val pesoTotal: Float,
+    val fechaRealizacion: Long?,
+    val pesoTotal: Float?,
     val idRutina: Int
 )
