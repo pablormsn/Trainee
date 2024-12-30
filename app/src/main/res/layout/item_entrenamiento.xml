@@ -19,8 +19,8 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:src="@drawable/biceps"
-            android:contentDescription="Entrenamiento" />
-        <!--Traducir-->
+            android:contentDescription="@string/training" />
+
 
         <LinearLayout
             android:layout_width="0dp"
@@ -48,8 +48,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@android:drawable/ic_delete"
-                    android:contentDescription="Borrar entrenamiento" />
-                <!--Traducir-->
+                    android:contentDescription="@string/delete_training" />
+
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>

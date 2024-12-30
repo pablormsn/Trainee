@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido a Trainee"
+        android:text="@string/welcome_message"
         android:textSize="32sp"
         android:textColor="@android:color/white"
         android:layout_gravity="center"
@@ -95,16 +95,14 @@
                 android:src="@drawable/entrenamientos"
                 android:scaleType="centerCrop"
                 android:background="@drawable/gym_button"
-                android:contentDescription="Entrenamientos" />
-                <!--TRADUCIR-->
+                android:contentDescription="@string/trainings" />
 
 
-            <!--TRADUCIR-->
             <TextView
                 android:id="@+id/entrenamientosButtonTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Entrenamientos"
+                android:text="@string/trainings"
                 android:textSize="16sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"

@@ -9,27 +9,27 @@
         android:id="@+id/editRutinaNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Nombre de la rutina" />
+        android:hint="@string/routine_name" />
 
     <EditText
         android:id="@+id/editRutinaDescripcion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Descripción de la rutina"
+        android:hint="@string/routine_description"
         android:layout_marginTop="16dp" />
 
     <Button
         android:id="@+id/buttonAddEjercicios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añadir ejercicios"
+        android:text="@string/add_exercises"
         android:layout_marginTop="16dp" />
 
     <TextView
         android:id="@+id/textViewEjerciciosAnadidos"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ejercicios añadidos:"
+        android:text="@string/exercises_added"
         android:layout_marginTop="16dp"
         android:textSize="18sp"
         android:textColor="@android:color/black"
@@ -39,6 +39,6 @@
         android:id="@+id/buttonGuardar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar"
+        android:text="@string/save"
         android:layout_marginTop="16dp" />
 </LinearLayout>

@@ -9,20 +9,20 @@
         android:id="@+id/editTextPeso"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Peso (kg)"
+        android:hint="@string/exercise_weight"
         android:inputType="numberDecimal" />
 
     <EditText
         android:id="@+id/editTextRepeticiones"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Repeticiones"
+        android:hint="@string/exercise_reps"
         android:inputType="number" />
 
     <Button
         android:id="@+id/buttonGuardarSerie"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Guardar Serie"
+        android:text="@string/save_set"
         android:layout_marginTop="16dp" />
 </LinearLayout>

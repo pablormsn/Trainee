@@ -5,7 +5,7 @@
     <string name="prompt_password">Contraseña</string>
     <string name="action_sign_in">Iniciar sesión o registrarse</string>
     <string name="action_sign_in_short">Iniciar sesión</string>
-    <string name="welcome">"Bienvenido !"</string>
+    <string name="welcome_message">"Bienvenido a Trainee!"</string>
     <string name="invalid_username">Usuario no válido</string>
     <string name="invalid_password">La contraseña debe tener más de 5 caracteres</string>
     <string name="login_failed">"Inicio de sesión fallido"</string>
@@ -43,4 +43,10 @@
     <string name="delete_routine">Borrar Rutina</string>
     <string name="set">Serie</string>
     <string name="delete">Borrar</string>
+    <string name="exercises_added">Ejercicios añadidos:</string>
+    <string name="save_set">Guardar Serie</string>
+    <string name="training">Entrenamiento</string>
+    <string name="delete_training">Borrar Entrenamiento</string>
+    <string name="no_training">No hay entrenamientos disponibles</string>
+    <string name="trainings">Entrenamientos</string>
 </resources>
