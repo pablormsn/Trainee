@@ -1,5 +1,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -14,11 +15,17 @@
         android:padding="8dp" />
 
     <ImageButton
+        android:id="@+id/buttonStartTraining"
+        android:layout_width="58dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_media_play"
+        android:contentDescription="Iniciar entrenamiento" />
+
+    <ImageButton
         android:id="@+id/buttonDeleteRutina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@android:drawable/ic_delete"
         android:contentDescription="Borrar rutina" />
-
 
 </LinearLayout>

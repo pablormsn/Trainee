@@ -64,6 +64,7 @@ dependencies {
     implementation(libs.androidx.databinding.adapters)
     implementation(libs.androidx.junit.ktx)
     implementation(libs.androidx.runner)
+    implementation(libs.filament.android)
     kapt(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

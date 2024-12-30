@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="2dp"
+    android:layout_gravity="center"
+    tools:context=".adapter.SerieAdapter">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Contenido de la serie -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Aquí van los datos de la serie, como el nombre del ejercicio, peso, repeticiones -->
+            <TextView
+                android:id="@+id/textSerie"
+                android:layout_width="152dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:text="Serie 1"
+                android:textSize="16sp" />
+
+            <!-- Peso -->
+            <EditText
+                android:id="@+id/editTextWeight"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Peso"
+                android:inputType="numberDecimal"
+                android:textSize="14sp"
+                android:padding="4dp"/>
+
+            <!-- Repeticiones -->
+            <EditText
+                android:id="@+id/editTextReps"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:hint="Reps"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:padding="4dp"/>
+
+            <!-- CheckBox para marcar si se completó -->
+            <CheckBox
+                android:id="@+id/checkBoxCompleted"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- Botón de eliminar, que aparecerá al deslizar -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Eliminar"
+            android:visibility="gone"
+            android:background="?android:attr/selectableItemBackground"
+            android:onClick="onDeleteClicked"/>
+
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

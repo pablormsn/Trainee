@@ -73,6 +73,10 @@ class RutinaListActivity : AppCompatActivity() {
                         startActivity(intent)
                     }, { rutina ->
                         deleteRutina(rutina)
+                    },{ rutina ->
+                        val intent = Intent(this@RutinaListActivity, EntrenamientoActivity::class.java)
+                        intent.putExtra("idRutina", rutina.idRutina)
+                        startActivity(intent)
                     })
                 }
             }

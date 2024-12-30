@@ -20,6 +20,7 @@ roomRuntimeAndroid = "2.7.0-alpha12"
 databindingAdapters = "8.7.3"
 junitKtx = "1.2.1"
 runner = "1.6.2"
+filamentAndroid = "1.17.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -51,6 +52,7 @@ androidx-junit-ktx = { group = "androidx.test.ext", name = "junit-ktx", version.
 androidx-runner = { group = "androidx.test", name = "runner", version.ref = "runner" }
 kotlin-kapt = { group = "org.jetbrains.kotlin", name = "kotlin-kapt", version.ref = "kotlin" }
 androidx-room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "androidxRoom" }
+filament-android = { group = "com.google.ar.sceneform", name = "filament-android", version.ref = "filamentAndroid" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
