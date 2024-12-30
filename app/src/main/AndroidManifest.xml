@@ -50,6 +50,11 @@
         <activity android:name=".AddSerieActivity"
             android:label="Añadir serie"
             android:theme="@style/Theme.FitHub"/>
+        <activity android:name=".EntrenamientosListActivity"
+            android:label="Mis entrenamientos"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.FitHub"/>
+        <!--TRADUCIR-->
     </application>
 
 </manifest>

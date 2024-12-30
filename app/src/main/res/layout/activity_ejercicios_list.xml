@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#124250">
+    android:background="@color/dark_green">
 
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchViewEjercicios"

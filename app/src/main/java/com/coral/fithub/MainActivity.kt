@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         // Botones
         val routinesButton: ImageButton = findViewById(R.id.routinesButton)
         val gymButton: ImageButton = findViewById(R.id.gymButton)
+        val trainingsButton: ImageButton = findViewById(R.id.trainingsButton)
 
         // Eventos de clic
         routinesButton.setOnClickListener {
@@ -42,6 +43,12 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, EjerciciosListActivity::class.java)
             startActivity(intent)
             Toast.makeText(this, "Mostrando lista de ejercicios", Toast.LENGTH_SHORT).show()
+        }
+
+        trainingsButton.setOnClickListener {
+            val intent = Intent(this, EntrenamientosListActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Mostrando lista de entrenamientos", Toast.LENGTH_SHORT).show()
         }
     }
 

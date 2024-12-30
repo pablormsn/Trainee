@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="#124250"
+    android:background="@color/dark_green"
     tools:context=".MainActivity">
 
     <!-- Título de la aplicación -->
@@ -50,6 +50,7 @@
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:layout_marginTop="8dp" />
+
         </LinearLayout>
 
         <!-- Botón de Ejercicios -->
@@ -73,6 +74,37 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/exercises_message"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Botón de Entrenamientos -->
+            <ImageButton
+                android:id="@+id/trainingsButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/entrenamientos"
+                android:scaleType="centerCrop"
+                android:background="@drawable/gym_button"
+                android:contentDescription="Entrenamientos" />
+                <!--TRADUCIR-->
+
+
+            <!--TRADUCIR-->
+            <TextView
+                android:id="@+id/entrenamientosButtonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Entrenamientos"
                 android:textSize="16sp"
                 android:textColor="@android:color/white"
                 android:gravity="center"
