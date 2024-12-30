@@ -1,6 +1,8 @@
 package com.coral.fithub
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -35,11 +37,25 @@ class EntrenamientoActivity : AppCompatActivity() {
                withContext(Dispatchers.Main) {
                    val textViewNombre = findViewById<TextView>(R.id.textRutinaNombreEntrenamiento)
                    val recyclerViewEjercicios = findViewById<RecyclerView>(R.id.recyclerViewEjerciciosEntrenamiento)
+                   val buttonTerminarEntrenamiento = findViewById<Button>(R.id.buttonTerminarEntrenamiento)
 
                    textViewNombre.text = rutina.nombre
 
                    recyclerViewEjercicios.layoutManager = LinearLayoutManager(this@EntrenamientoActivity)
                    recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(ejercicios, idEntrenamiento)
+
+                   buttonTerminarEntrenamiento.setOnClickListener {
+                       CoroutineScope(Dispatchers.IO).launch {
+                           entrenamiento.fechaRealizacion = System.currentTimeMillis()
+                           entrenamientoDao.update(entrenamiento)
+                           withContext(Dispatchers.Main) {
+                               val intent = Intent(this@EntrenamientoActivity, MainActivity::class.java)
+                               intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
+                               startActivity(intent)
+                               finish()
+                           }
+                       }
+                   }
                }
            }
        }

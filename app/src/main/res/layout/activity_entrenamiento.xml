@@ -41,6 +41,15 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 tools:listitem="@layout/item_ejercicio_entrenamiento" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonTerminarEntrenamiento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Terminar entrenamiento"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp" />
+        <!--Traducir-->
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
