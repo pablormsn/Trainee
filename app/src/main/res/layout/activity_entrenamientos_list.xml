@@ -6,6 +6,18 @@
     android:background="@color/dark_green"
     android:padding="16dp">
 
+    <TextView
+        android:id="@+id/textViewNoEntrenamientos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay entrenamientos disponibles"
+        android:visibility="gone"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:padding="16dp" />
+    <!--Traducir-->
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEntrenamientos"
         android:layout_width="match_parent"
