@@ -27,7 +27,7 @@ class EjercicioEntrenamientoAdapter(
     override fun onBindViewHolder(holder: EjercicioEntrenamientoViewHolder, position: Int) {
         val ejercicio = listaDeEntrenamientos[position]
         holder.textViewNombre.text = ejercicio.nombre
-        holder.textViewRutina.text = nombreRutina // Configurar el nombre de la rutina
+        holder.textViewRutina.text = nombreRutina // Asignar el nombre de la rutina al TextView
     }
 
     override fun getItemCount(): Int {

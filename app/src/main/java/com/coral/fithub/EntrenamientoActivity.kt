@@ -28,9 +28,9 @@ class EntrenamientoActivity : AppCompatActivity() {
 
               CoroutineScope(Dispatchers.IO).launch {
                   val rutina = rutinaDao.get(idRutina)
-                  val ejerciciosR = rutinaEjercicioDao.getbyIdRutina(idRutina)
                   val ejercicios = ejercicioDao.getEjerciciosPorRutina(idRutina)
 
+                  print(ejercicios)
                   withContext(Dispatchers.Main) {
                       val textViewNombre = findViewById<TextView>(R.id.textRutinaNombre)
                       val recyclerViewEjercicios =
@@ -38,8 +38,7 @@ class EntrenamientoActivity : AppCompatActivity() {
 
                       textViewNombre.text = rutina.nombre
 
-                      recyclerViewEjercicios.layoutManager =
-                          LinearLayoutManager(this@EntrenamientoActivity)
+                      recyclerViewEjercicios.layoutManager = LinearLayoutManager(this@EntrenamientoActivity)
                       recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(ejercicios, rutina.nombre)
                   }
               }
