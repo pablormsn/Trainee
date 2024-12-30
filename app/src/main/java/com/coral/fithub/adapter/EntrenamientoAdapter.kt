@@ -29,7 +29,7 @@ class EntrenamientoAdapter(
 
         // Configurar el RecyclerView para la lista de ejercicios
         holder.recyclerViewEjercicios.layoutManager = LinearLayoutManager(holder.itemView.context)
-        holder.recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(rutina.ejercicios)
+        //holder.recyclerViewEjercicios.adapter = EjercicioEntrenamientoAdapter(rutina.ejercicios)
     }
 
     override fun getItemCount(): Int {

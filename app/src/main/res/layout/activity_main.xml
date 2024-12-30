@@ -1,3 +1,4 @@
+<!-- filepath: /c:/Users/probl/Desktop/FitHub/app/src/main/res/layout/activity_main.xml -->
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -14,35 +15,69 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Trainee"
-        android:textSize="24sp"
+        android:textSize="42sp"
         android:textColor="@android:color/darker_gray"
         android:gravity="center"
         android:paddingBottom="16dp" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:gravity="center">
 
-        <!-- Botón -->
-        <ImageButton
-            android:id="@+id/gymButton"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:background="@drawable/gym_button"
-            android:src="@drawable/gym" />
-
-        <!-- Título del Botón -->
-        <TextView
-            android:id="@+id/buttonTitle"
-            android:layout_width="wrap_content"
+        <!-- Botón de Rutinas -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Fuerza"
-            android:textSize="16sp"
-            android:textColor="@android:color/white"
-            android:gravity="center"
-            android:layout_marginTop="8dp" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/routinesButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/gym_button"
+                android:src="@drawable/routines" />
+
+            <TextView
+                android:id="@+id/rutinasButtonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rutinas"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Botón de Ejercicios -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/gymButton"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:background="@drawable/gym_button"
+                android:src="@drawable/gym" />
+
+            <TextView
+                android:id="@+id/gymButtonTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ejercicios"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -1,31 +1,48 @@
-<LinearLayout
+<!-- filepath: /c:/Users/probl/Desktop/FitHub/app/src/main/res/layout/item_rutina.xml -->
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#799299"
+    app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/textRutNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:padding="8dp" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#124250">
 
-    <ImageButton
-        android:id="@+id/buttonStartTraining"
-        android:layout_width="58dp"
-        android:layout_height="wrap_content"
-        app:srcCompat="@android:drawable/ic_media_play"
-        android:contentDescription="Iniciar entrenamiento" />
+        <TextView
+            android:id="@+id/textRutNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:padding="8dp" />
 
-    <ImageButton
-        android:id="@+id/buttonDeleteRutina"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@android:drawable/ic_delete"
-        android:contentDescription="Borrar rutina" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end">
 
-</LinearLayout>
+            <ImageButton
+                android:id="@+id/buttonStartTraining"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@android:drawable/ic_media_play"
+                android:contentDescription="Iniciar entrenamiento" />
+
+            <ImageButton
+                android:id="@+id/buttonDeleteRutina"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_delete"
+                android:contentDescription="Borrar rutina" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

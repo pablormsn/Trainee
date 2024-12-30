@@ -1,0 +1,13 @@
+<!-- filepath: /c:/Users/probl/Desktop/FitHub/app/src/main/res/layout/activity_ejercicios_list.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewEjerciciosList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>

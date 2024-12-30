@@ -14,13 +14,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         // Botones
+        val routinesButton: ImageButton = findViewById(R.id.routinesButton)
         val gymButton: ImageButton = findViewById(R.id.gymButton)
 
         // Eventos de clic
-        gymButton.setOnClickListener {
+        routinesButton.setOnClickListener {
             val intent = Intent(this, RutinaListActivity::class.java)
             startActivity(intent)
-            Toast.makeText(this, "Gimnasio seleccionado", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Mostrando tus rutinas", Toast.LENGTH_SHORT).show()
+        }
+
+        gymButton.setOnClickListener {
+            val intent = Intent(this, EjerciciosListActivity::class.java)
+            startActivity(intent)
+            Toast.makeText(this, "Mostrando lista de ejercicios", Toast.LENGTH_SHORT).show()
         }
     }
 }
