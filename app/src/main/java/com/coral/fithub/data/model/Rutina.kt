@@ -8,6 +8,6 @@ import androidx.room.*
 data class Rutina (
     @PrimaryKey(autoGenerate = true)
     val idRutina: Int,
-    val nombre: String,
-    val descripcion: String?
+    var nombre: String,
+    var descripcion: String?
 )

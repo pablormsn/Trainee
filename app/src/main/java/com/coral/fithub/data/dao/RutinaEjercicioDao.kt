@@ -20,4 +20,7 @@ interface RutinaEjercicioDao {
 
     @Query("SELECT * FROM rutinaEjercicio WHERE idEjercicio = :id")
     suspend fun getbyIdEjercicio(id: Int): List<RutinaEjercicio>
+
+    @Query("DELETE FROM rutinaEjercicio WHERE idRutina = :id")
+    suspend fun deleteByRutina(id: Int)
 }

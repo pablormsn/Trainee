@@ -6,30 +6,139 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <TextView
-        android:id="@+id/textRutinaNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="24sp"
-        android:textColor="@android:color/black"
-        android:padding="8dp" />
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textRutinaNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="24sp"
+            android:textColor="@android:color/black"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonEditarRutinaNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:id="@+id/layoutNombre">
+
+        <EditText
+            android:id="@+id/editTextRutinaNombre"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nuevo nombre" />
+
+        <Button
+            android:id="@+id/buttonGuardarNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/buttonCancelarNombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textRutinaDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonEditarRutinaDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:id="@+id/layoutDescripcion">
+
+        <EditText
+            android:id="@+id/editTextRutinaDescripcion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nueva descripción" />
+
+        <Button
+            android:id="@+id/buttonGuardarDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guardar" />
+
+        <Button
+            android:id="@+id/buttonCancelarDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancelar" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/textViewEjerciciosRutina"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ejercicios:"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/buttonEditarEjerciciosRutina"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Editar" />
+    </LinearLayout>
 
     <TextView
-        android:id="@+id/textRutinaDescripcion"
+        android:id="@+id/textViewNoEjercicios"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="No hay ejercicios en la rutina"
         android:textSize="18sp"
         android:textColor="@android:color/black"
-        android:padding="8dp" />
-
-    <TextView
-        android:id="@+id/textViewEjerciciosRutina"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ejercicios:"
-        android:textSize="18sp"
-        android:textColor="@android:color/black"
-        android:padding="8dp" />
+        android:gravity="center"
+        android:visibility="gone"
+        android:padding="16dp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewEjerciciosRutina"
