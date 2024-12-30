@@ -40,6 +40,7 @@ class ShowRutinaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_show_rutina)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val idRutina = intent.getIntExtra("idRutina", -1)
 

@@ -24,6 +24,7 @@ class AddRutinaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_rutina)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val editTextNombre = findViewById<EditText>(R.id.editRutinaNombre)
         val editTextDescripcion = findViewById<EditText>(R.id.editRutinaDescripcion)

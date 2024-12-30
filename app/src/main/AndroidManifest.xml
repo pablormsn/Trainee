@@ -22,23 +22,29 @@
         <activity
             android:name=".RutinaListActivity"
             android:exported="true"
+            android:parentActivityName=".MainActivity"
             android:label="Mis rutinas"
             android:theme="@style/Theme.FitHub" />
         <activity android:name=".AddRutinaActivity"
             android:exported="true"
+            android:parentActivityName=".RutinaListActivity"
             android:label="Añadir rutina"
             android:theme="@style/Theme.FitHub" />
         <activity android:name=".ShowRutinaActivity"
+            android:parentActivityName=".RutinaListActivity"
             android:label="Rutina"
             android:theme="@style/Theme.FitHub"/>
         <activity android:name=".SelectEjerciciosActivity"
             android:label="Seleccionar ejercicios"
             android:theme="@style/Theme.FitHub"/>
-        <activity android:name=".ShowEjercicioActivity"/>
+        <activity android:name=".ShowEjercicioActivity"
+            android:label=""
+            android:parentActivityName=".EjerciciosListActivity" />
         <activity android:name=".EntrenamientoActivity"
             android:label="Entrenamiento"
             android:theme="@style/Theme.FitHub"/>
         <activity android:name=".EjerciciosListActivity"
+            android:parentActivityName=".MainActivity"
             android:label="Ejercicios"
             android:theme="@style/Theme.FitHub"/>
     </application>

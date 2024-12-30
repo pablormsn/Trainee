@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.coral.fithub.adapter.EjercicioAdapter
@@ -30,6 +31,7 @@ class EjerciciosListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ejercicios_list)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val recyclerViewEjercicios = findViewById<RecyclerView>(R.id.recyclerViewEjerciciosList)
         recyclerViewEjercicios.layoutManager = LinearLayoutManager(this)

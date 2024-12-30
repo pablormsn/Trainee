@@ -27,6 +27,7 @@ class RutinaListActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rutina_list)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // Configurar RecyclerView
         recyclerView = findViewById(R.id.recyclerViewRutinas)
